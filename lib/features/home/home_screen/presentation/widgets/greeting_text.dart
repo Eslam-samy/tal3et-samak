@@ -4,7 +4,7 @@ import 'package:talet_samak/utils/localization/app_localizations.dart';
 class GreetingText extends StatelessWidget {
   const GreetingText({super.key, required this.name});
 
-  final String name;
+  final String? name;
   @override
   Widget build(BuildContext context) {
     return SizedBox(

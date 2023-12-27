@@ -13,13 +13,15 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  void initState() {
+  void initState() async {
 // Wait for 3 seconds and then navigate to the next screen
     Timer(
       const Duration(seconds: 3),
-      () => Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (ctx) => const WelcomeScreen()),
-      ),
+      () {
+        _checkState();
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (ctx) => const WelcomeScreen()));
+      },
     );
     super.initState();
   }
@@ -32,4 +34,6 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
+
+  void _checkState() {}
 }

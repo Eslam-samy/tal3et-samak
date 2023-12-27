@@ -11,8 +11,15 @@
     "get_now": "Get Now",
     "trend_meals": "Trend Meals",
     "special_offers": "Special Offers",
-    "egp": "Egp"
-
-
-
+    "egp": "Egp",
+    "welcome": "Welcome",
+    "please_login": "Please login with your account \n to continue ",
+    "phone_number": "Phone Number",
+    "password": "Password",
+    "forget_pssword": "Forgot Password ?",
+    "dont_have_account": "Don't have an account?",
+    "sign_up": "SignUp",
+    "login": "Login",
+    "please_enter_a_valid_phone": "Please enter a valid phone",
+    "please_enter_a_valid_password": "Please enter a valid password"
 }

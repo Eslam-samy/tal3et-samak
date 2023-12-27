@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:talet_samak/core/models/user_entity.dart';
 import 'package:talet_samak/features/home/home_screen/demain/entities/category_entity.dart';
 import 'package:talet_samak/features/home/home_screen/demain/entities/meta_entity.dart';
 import 'package:talet_samak/features/home/home_screen/demain/entities/product_entity.dart';
@@ -25,7 +26,7 @@ class HomeApiData extends Equatable {
   final List<SliderEntity>? sliders;
   final List<CategoryEntity>? categories;
   final List<ProductEntity>? offers;
-  final dynamic user;
+  final UserEntity? user;
   final int? notificationCount;
   final String? minOrder;
   final String? maxOrder;

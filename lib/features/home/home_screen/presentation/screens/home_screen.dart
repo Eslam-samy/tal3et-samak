@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:talet_samak/core/constants/app_constants.dart';
+import 'package:talet_samak/core/my_log.dart';
 import 'package:talet_samak/features/home/home_screen/presentation/bloc/home/remote/remote_home_bloc.dart';
 import 'package:talet_samak/features/home/home_screen/presentation/widgets/ImageSlider.dart';
 import 'package:talet_samak/features/home/home_screen/presentation/widgets/categoris_widget.dart';
@@ -40,14 +41,14 @@ class HomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     HomeScreenAppbar(
-                      imageUrl: '',
+                      imageUrl: state.home.data?.user?.image ?? "",
                       onSearchClicked: () {},
                       onProfileClicked: () {},
                     ),
                     const SizedBox(
                       height: 28,
                     ),
-                    const GreetingText(name: ''),
+                    GreetingText(name: state.home.data?.user?.name ?? ""),
                     const SizedBox(
                       height: 20,
                     ),

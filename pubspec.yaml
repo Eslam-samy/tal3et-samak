@@ -90,6 +90,7 @@ flutter:
     - assets/icons/orders_icon.svg
     - assets/icons/fav_icon.svg
     - assets/icons/cart_icon.svg
+    - assets/icons/back_icon.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

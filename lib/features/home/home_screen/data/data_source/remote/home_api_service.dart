@@ -11,5 +11,7 @@ abstract class HomeApiService {
   factory HomeApiService(Dio dio) = _HomeApiService;
 
   @GET('/home')
-  Future<HttpResponse<Home>> getHome();
+  Future<HttpResponse<Home>> getHome(
+      @Header('Authorization') String? token,
+      );
 }

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'home_api_service.dart';
+part of 'login_api_service.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,8 +8,8 @@ part of 'home_api_service.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
-class _HomeApiService implements HomeApiService {
-  _HomeApiService(
+class _LoginAPiService implements LoginAPiService {
+  _LoginAPiService(
     this._dio, {
     this.baseUrl,
   }) {
@@ -21,22 +21,33 @@ class _HomeApiService implements HomeApiService {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<Home>> getHome(String? token) async {
+  Future<HttpResponse<LoginResponse>> login(
+    String? phone,
+    String? password,
+    String? imei,
+    String? token,
+    String? device_type,
+  ) async {
     const _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'phone': phone,
+      r'password': password,
+      r'imei': imei,
+      r'token': token,
+      r'device_type': device_type,
+    };
     queryParameters.removeWhere((k, v) => v == null);
-    final _headers = <String, dynamic>{r'Authorization': token};
-    _headers.removeWhere((k, v) => v == null);
+    final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<HttpResponse<Home>>(Options(
-      method: 'GET',
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<HttpResponse<LoginResponse>>(Options(
+      method: 'POST',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/home',
+              '/login',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -45,7 +56,7 @@ class _HomeApiService implements HomeApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    final value = Home.fromJson(_result.data!);
+    final value = LoginResponse.fromJson(_result.data!);
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
   }

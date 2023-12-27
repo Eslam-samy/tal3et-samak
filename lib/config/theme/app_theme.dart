@@ -8,6 +8,7 @@ const textColor = Color(0xff08322C);
 const orangeColor = Color(0xffFF8A00);
 const yellowColor = Color(0xffFFC700);
 const grayColor = Color(0xffC3CBD2);
+const strokeColor = Color.fromARGB(255, 113, 183, 202);
 
 final appTheme = ThemeData(
   primaryColor: primaryColor,

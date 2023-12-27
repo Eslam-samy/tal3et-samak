@@ -1,3 +1,4 @@
+import 'package:talet_samak/core/models/user.dart';
 import 'package:talet_samak/features/home/home_screen/data/model/category.dart';
 import 'package:talet_samak/features/home/home_screen/data/model/meta.dart';
 import 'package:talet_samak/features/home/home_screen/data/model/product.dart';
@@ -62,7 +63,7 @@ class Data extends HomeApiData {
           ? null
           : (json["data"] as List).map((e) => Product.fromJson(e)).toList(),
       meta: json["meta"] == null ? null : Meta.fromJson(json["meta"]),
-      user: json["user"],
+      user: json["user"] == null ? null : User.fromJson(json['user']),
       notificationCount: json["notification_count"],
       minOrder: json["min_order"],
       maxOrder: json["max_order"],

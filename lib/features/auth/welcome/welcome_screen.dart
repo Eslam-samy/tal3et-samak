@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:talet_samak/config/theme/app_theme.dart';
-import 'package:talet_samak/features/auth/login/screens/login_screen.dart';
+import 'package:talet_samak/features/auth/login/presentation/screens/login_screen.dart';
 import 'package:talet_samak/features/auth/signup/signup_screen.dart';
 import 'package:talet_samak/features/auth/welcome/widgets/welcome_screen_button.dart';
 import 'package:talet_samak/features/home/home_tabs_screen.dart';
@@ -13,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     void navigateToLoginScreen() {
       Navigator.of(context).push(
-        MaterialPageRoute(builder: (ctx) => const LoginScreen()),
+        MaterialPageRoute(builder: (ctx) => LoginScreen()),
       );
     }
 

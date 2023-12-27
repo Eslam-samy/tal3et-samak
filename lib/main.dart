@@ -7,7 +7,8 @@ import 'package:talet_samak/injection_container.dart';
 import 'package:talet_samak/utils/localization/app_localizations.dart';
 import 'package:talet_samak/utils/localization/cubit/locale_cubit.dart';
 
-void main() async{
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await initializeDependancies();
   runApp(const MyApp());
 }
